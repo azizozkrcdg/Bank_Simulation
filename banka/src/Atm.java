@@ -14,7 +14,7 @@ public class Atm {
             if (Sifre.equals(Sifre_confirm)) {
                 // eğer şifre doğru ise
                 while (true) {
-                    String message = "******** ATM BANKAMATİK ********\n";
+                    String message = "******** ATM BANKAMATİK ******** deneme\n";
                     message += "Sayın : " + new_kullanici.isim + "\nHesap Bakiyesi : " + new_kullanici.mevcut_para
                             + " ₺ \n";
                     message+="IBAN : "+new_kullanici.IBAN+"\n";
