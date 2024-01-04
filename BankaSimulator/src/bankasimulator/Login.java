@@ -18,7 +18,7 @@ public class Login extends javax.swing.JFrame {
     public Login() {
         initComponents();
     }
-
+    public static MysqlConnection baglan = new MysqlConnection();
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -141,7 +141,7 @@ public class Login extends javax.swing.JFrame {
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(178, 178, 178)
                         .addComponent(jButton1)))
-                .addContainerGap(240, Short.MAX_VALUE))
+                .addContainerGap(151, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -206,16 +206,18 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        while(login_Phone == SignUp.signup_Phone && login_Password == SignUp.signup_Password ){
-            Main MainFrame = new Main();
-            MainFrame.setVisible(true);
-            MainFrame.pack();
-            MainFrame.setLocationRelativeTo(null);     
-            this.dispose();
+        String Adim = login_Phone.getText();
+        String Sifre= login_Password.getText();
+        String girisim = baglan.GirisSorgu(Adim, Sifre);
+        if(girisim.equals("1") ){
+            JOptionPane.showMessageDialog(null, "Giriş Başarılı Kardeşim");
+            
         }
-        if(login_Phone != SignUp.signup_Phone || login_Password != SignUp.signup_Password){
-            JOptionPane.showMessageDialog(null,"Giriş bilgileri yanlış");
+        else { 
+            JOptionPane.showMessageDialog(null, "Kullanıcı Adı Ve Şifre Yanlış");
         }
+        
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
