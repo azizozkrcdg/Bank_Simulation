@@ -18,48 +18,64 @@ import javax.swing.JOptionPane;
  */
 public class MysqlConnection {
 
-    private static final String URL = "jdbc:mysql://localhost:3306/java-test";
+    public static String URL;
     // Veritabanı kullanıcı adı
-    private static final String KULLANICI_AD = "root";
+    private static String KULLANICI_AD;
     // Veritabanı şifre
-    private static final String SIFRE = "";
-
-    public static String GirisSorgu(String kullanici_adi, String sifre) {
-            try {
+    private static String SIFRE ;
+    
+    
+    public  MysqlConnection(String URL,String KULLANICI_AD,String SIFRE){
+        try {
+            this.URL=URL;
+            this.KULLANICI_AD=KULLANICI_AD;
+            this.SIFRE=SIFRE;
             Class.forName("com.mysql.cj.jdbc.Driver");
-
-            // Veritabanına bağlan
             Connection baglanti = DriverManager.getConnection(URL, KULLANICI_AD, SIFRE);
-            
             if (baglanti != null) {
-                
-                
-                //bağlantı Başarılı İse :.. 
-                String sorgu = "SELECT * FROM kullanicilar WHERE adi=\"" + kullanici_adi + "\" AND password=\"" + sifre + "\"";
-                PreparedStatement prepare = baglanti.prepareStatement(sorgu);
-                ResultSet execute = prepare.executeQuery();
-                if(execute.next()){
-                    return "1";
-                }
-                else{
-                    //JOptionPane.showMessageDialog(null,"Maalesef Giriş Başarısız");
-                    return "0";
-                }
-                
-                
-            } else {
-                System.out.println("Veritabanına bağlantı başarısız!");
-                return "vt_hatasi";
-                
-            }
-
+         }
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
-        return "";
-        
+        //return "";
         
     }
+   
+//    public static String GirisSorgu(String kullanici_adi, String sifre) {
+//            try {
+//            Class.forName("com.mysql.cj.jdbc.Driver");
+//
+//            // Veritabanına bağlan
+//            Connection baglanti = DriverManager.getConnection(URL, KULLANICI_AD, SIFRE);
+//            
+//            if (baglanti != null) {
+//          
+//                //bağlantı Başarılı İse :.. 
+//                String sorgu = "SELECT * FROM kullanicilar WHERE adi=\"" + kullanici_adi + "\" AND password=\"" + sifre + "\"";
+//                PreparedStatement prepare = baglanti.prepareStatement(sorgu);
+//                ResultSet execute = prepare.executeQuery();
+//                if(execute.next()){
+//                    return "1";
+//                }
+//                else{
+//                    //JOptionPane.showMessageDialog(null,"Maalesef Giriş Başarısız");
+//                    return "0";
+//                }
+//                
+//                
+//            } else {
+//                System.out.println("Veritabanına bağlantı başarısız!");
+//                return "vt_hatasi";
+//                
+//            }
+//
+//        } catch (ClassNotFoundException | SQLException e) {
+//            e.printStackTrace();
+//        }
+//        return "";
+//        
+//        
+//    }
 
     public static String  KayitOlustur(){
         return "Kayit_olundu...";
