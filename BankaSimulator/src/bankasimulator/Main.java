@@ -142,6 +142,11 @@ public class Main extends javax.swing.JFrame {
         jButton4.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jButton4.setForeground(new java.awt.Color(102, 102, 102));
         jButton4.setText("Para Gönder");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jLabel2.setText("Soyadı : ");
 
@@ -269,8 +274,7 @@ public class Main extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
     
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        //KisiAD1.setText(Adi);
-        
+
         String Adim = KisiAD1.getText();
         String mail= KisiMail.getText();
         try {
@@ -307,6 +311,15 @@ public class Main extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        ParaGonderForm ParaGonder = new ParaGonderForm();
+        
+        
+        
+        ParaGonder.show();
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
