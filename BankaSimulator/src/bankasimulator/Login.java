@@ -217,22 +217,22 @@ public class Login extends javax.swing.JFrame {
     
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         
-        String Adim = login_Phone.getText();
-        String Sifre= login_Password.getText();
+        String phone = login_Phone.getText();
+        String password= login_Password.getText();
         //MysqlConnection baglan = new MysqlConnection("jdbc:mysql://localhost:3306/java-test","root","");
         try {
-            Connection baglanti = DriverManager.getConnection("jdbc:mysql://localhost:3306/java-test","root","");
+            Connection baglanti = DriverManager.getConnection("jdbc:mysql://localhost:3308/java-test","root","");
             if (baglanti!=null){
-                String sorgu = "SELECT * FROM kullanicilar WHERE adi=\"" + Adim + "\" AND password=\"" + Sifre + "\"";
+                String sorgu = "SELECT * FROM banka_kayit WHERE signup_Phone=\"" + phone + "\" AND signup_Password=\"" + password + "\"";
                 PreparedStatement prepare = baglanti.prepareStatement(sorgu);
                 ResultSet execute = prepare.executeQuery(); 
                 
                 if(execute.next()){
                     Main UserPage = new Main();
                     //JOptionPane.showMessageDialog(null, execute.getString("soyadi"));                     
-                    UserPage.KisiSoyad.setText(execute.getString("soyadi"));
-                    UserPage.KisiMail.setText(execute.getString("email"));
-                    UserPage.KisiAD1.setText(execute.getString("adi"));
+                    
+                    UserPage.KisiMail.setText(execute.getString("signup_Mail"));
+                    UserPage.KisiAD1.setText(execute.getString("signup_Name"));
                     UserPage.setVisible(true);
                     UserPage.pack();
                     UserPage.setLocationRelativeTo(null); 

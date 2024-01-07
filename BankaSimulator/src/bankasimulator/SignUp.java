@@ -3,13 +3,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package bankasimulator;
-
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import javax.swing.JOptionPane;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 /**
  *
  * @author Hasan
  */
 public class SignUp extends javax.swing.JFrame {
-
+    Connection con = null;
+    PreparedStatement pst = null;
     /**
      * Creates new form SignUp
      */
@@ -215,10 +220,22 @@ public class SignUp extends javax.swing.JFrame {
     }//GEN-LAST:event_signup_PasswordActionPerformed
 
     private void button_Kayit2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_Kayit2ActionPerformed
-        SignUp txt_jtextfield = new SignUp();
-        SignUp signup_Name = new SignUp();
-
-        signup_Name.add(txt_jtextfield);
+        try{
+            String query = "INSERT INTO `banka_kayit`(`signup_Name`, `signup_Phone`, `signup_Mail`, `signup_Password`) VALUES (?,?,?,?)";
+             con = DriverManager.getConnection("jdbc:mysql://localhost:3308/java-test","root",""); 
+             pst = con.prepareStatement(query);
+             pst.setString(1, signup_Name.getText());
+             pst.setString(2, signup_Phone.getText());
+             pst.setString(3, signup_Mail.getText());
+             pst.setString(4, signup_Password.getText());
+             pst.executeUpdate();
+             
+             JOptionPane.showMessageDialog(null, "Kayıt Başarılı");
+             
+        }
+        catch(Exception ex){
+            JOptionPane.showMessageDialog(null, ex);
+        }
     }//GEN-LAST:event_button_Kayit2ActionPerformed
 
     /**
