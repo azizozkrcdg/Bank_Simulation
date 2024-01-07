@@ -233,7 +233,9 @@ public class Login extends javax.swing.JFrame {
                     UserPage.KisiSoyad.setText(execute.getString("soyadi"));
                     UserPage.KisiMail.setText(execute.getString("email"));
                     UserPage.KisiAD1.setText(execute.getString("adi"));
-                    UserPage.show();
+                    UserPage.setVisible(true);
+                    UserPage.pack();
+                    UserPage.setLocationRelativeTo(null); 
                     this.dispose();
                 }
             }

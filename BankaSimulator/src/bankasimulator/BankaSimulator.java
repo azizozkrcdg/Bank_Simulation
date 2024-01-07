@@ -16,8 +16,7 @@ public String bakiye;
             this.bakiye = yeniBakiye;
             }
     public static void main(String[] args) {
-        BankaSimulator myObj = new BankaSimulator();
-        myObj.setBakiye("1000");
+        
         Login LoginFrame = new Login();
         LoginFrame.setVisible(true);
         LoginFrame.pack();

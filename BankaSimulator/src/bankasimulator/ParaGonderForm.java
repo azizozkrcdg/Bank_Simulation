@@ -46,16 +46,31 @@ public class ParaGonderForm extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        label1.setText("Alıcı Soyadı");
+        label1.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        label1.setForeground(new java.awt.Color(102, 102, 102));
+        label1.setText("Alıcı Soyadı :");
 
+        label2.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        label2.setForeground(new java.awt.Color(102, 102, 102));
         label2.setText("Alıcı Adı  : ");
 
-        label3.setText("Alici İban ");
+        label3.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        label3.setForeground(new java.awt.Color(102, 102, 102));
+        label3.setText("Alıcı İban :");
 
-        label4.setText("Göndermek İstediğin Tutar");
+        label4.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        label4.setForeground(new java.awt.Color(102, 102, 102));
+        label4.setText("Göndermek İstediğin Tutar :");
 
         button1.setBackground(new java.awt.Color(204, 255, 153));
-        button1.setLabel("button1");
+        button1.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        button1.setForeground(new java.awt.Color(102, 102, 102));
+        button1.setLabel("Gönder");
+        button1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                button1MouseClicked(evt);
+            }
+        });
         button1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 button1ActionPerformed(evt);
@@ -70,15 +85,14 @@ public class ParaGonderForm extends javax.swing.JFrame {
                 .addContainerGap(25, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(button1, javax.swing.GroupLayout.DEFAULT_SIZE, 312, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(tutar)
-                        .addComponent(iban)
-                        .addComponent(label3, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(soyad)
-                        .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(ad, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 312, Short.MAX_VALUE)
-                        .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(label4, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(tutar, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(iban, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(label3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 312, Short.MAX_VALUE)
+                    .addComponent(soyad, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(label2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ad, javax.swing.GroupLayout.DEFAULT_SIZE, 312, Short.MAX_VALUE)
+                    .addComponent(label1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(24, 24, 24))
         );
         layout.setVerticalGroup(
@@ -102,7 +116,7 @@ public class ParaGonderForm extends javax.swing.JFrame {
                 .addComponent(tutar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
 
         pack();
@@ -143,6 +157,10 @@ public class ParaGonderForm extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_button1ActionPerformed
+
+    private void button1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_button1MouseClicked
 
     /**
      * @param args the command line arguments

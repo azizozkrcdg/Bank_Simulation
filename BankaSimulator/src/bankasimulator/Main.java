@@ -11,6 +11,8 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import javax.swing.JFrame;
+
 
 /**
  *
@@ -137,6 +139,11 @@ public class Main extends javax.swing.JFrame {
         jButton3.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jButton3.setForeground(new java.awt.Color(102, 102, 102));
         jButton3.setText("Para Yatır");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setBackground(new java.awt.Color(0, 204, 255));
         jButton4.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
@@ -309,17 +316,37 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        ParaCekForm ParaCek = new ParaCekForm();
+        ParaCek.setVisible(true);
+        ParaCek.pack();
+        ParaCek.setLocationRelativeTo(null);
+        
+        
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         ParaGonderForm ParaGonder = new ParaGonderForm();
+        ParaGonder.setVisible(true);
+        ParaGonder.pack();
+        ParaGonder.setLocationRelativeTo(null);
         
         
         
-        ParaGonder.show();
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        ParaYatirForm ParaYatir = new ParaYatirForm();
+        ParaYatir.setVisible(true);
+        ParaYatir.pack();
+        ParaYatir.setLocationRelativeTo(null);
+        
+        
+        
+        
+        
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -363,7 +390,7 @@ public class Main extends javax.swing.JFrame {
     public static javax.swing.JLabel KisiSoyad;
     protected static javax.swing.JButton jButton1;
     protected static javax.swing.JButton jButton2;
-    protected static javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton3;
     protected static javax.swing.JButton jButton4;
     protected static javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
