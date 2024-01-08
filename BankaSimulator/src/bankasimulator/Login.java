@@ -219,7 +219,7 @@ public class Login extends javax.swing.JFrame {
         
         String phone = login_Phone.getText();
         String password= login_Password.getText();
-        //MysqlConnection baglan = new MysqlConnection("jdbc:mysql://localhost:3306/java-test","root","");
+        //MysqlConnection baglan = new MysqlConnection("jdbc:mysql://localhost:3308/java-test","root","");
         try {
             Connection baglanti = DriverManager.getConnection("jdbc:mysql://localhost:3308/java-test","root","");
             if (baglanti!=null){
@@ -230,8 +230,6 @@ public class Login extends javax.swing.JFrame {
                 if(execute.next()){
                     Main UserPage = new Main();
                     //JOptionPane.showMessageDialog(null, execute.getString("soyadi"));                     
-                    
-                    UserPage.KisiMail.setText(execute.getString("signup_Mail"));
                     UserPage.KisiAD1.setText(execute.getString("signup_Name"));
                     UserPage.setVisible(true);
                     UserPage.pack();
@@ -239,6 +237,8 @@ public class Login extends javax.swing.JFrame {
                     this.dispose();
                 }
             }
+     
+            
         } catch (SQLException ex) {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         }
