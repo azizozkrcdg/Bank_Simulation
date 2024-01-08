@@ -274,10 +274,7 @@ public class SignUp extends javax.swing.JFrame {
         
        
        try{
-             if(signup_Name.getText()=="" || signup_Phone.getText()=="" || signup_Mail.getText()=="" ||signup_Password.getText()==""){
-                 JOptionPane.showMessageDialog(null, "Alanları boş bırakmayınız!");
-             }
-             else{
+             
              String query = "INSERT INTO `banka_kayit`(`signup_Name`, `signup_Phone`, `signup_Mail`, `signup_Password`) VALUES (?,?,?,?)";
              con = DriverManager.getConnection("jdbc:mysql://localhost:3308/java-test","root",""); 
              
@@ -289,7 +286,7 @@ public class SignUp extends javax.swing.JFrame {
              pst.executeUpdate();
              
              JOptionPane.showMessageDialog(null, "Kayıt Başarılı");
-             }
+             
             
             rs = pst.getGeneratedKeys();
             int userId = -1;

@@ -3,6 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package bankasimulator;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import javax.swing.JOptionPane;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 /**
  *
@@ -87,7 +93,17 @@ public class ParaCekForm extends javax.swing.JFrame {
     }//GEN-LAST:event_paraCekActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
+        try{
+           Connection baglanti = DriverManager.getConnection("jdbc:mysql://localhost:3308/java-test","root",""); 
+           if (baglanti!=null){
+                String sorgu = "SELECT `mevcut_para` FROM `cuzdan` WHERE 1";
+                PreparedStatement prepare = baglanti.prepareStatement(sorgu);
+                 ResultSet execute = prepare.executeQuery(); 
+           }
+        }
+        catch(SQLException e){
+            
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
