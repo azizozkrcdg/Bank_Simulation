@@ -419,9 +419,8 @@ public class Main extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-<<<<<<< HEAD
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
 
         String Adim = KisiAD1.getText();
         String mail = KisiMail.getText();
@@ -448,11 +447,8 @@ public class Main extends javax.swing.JFrame {
         }
 
 
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }                                        
 
-=======
-    
->>>>>>> 616357d4cc80e89ef4ae655b6033fab8243cd4db
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         JOptionPane.showMessageDialog(null, "Bizi tercih ettiğiniz için teşekkürler");
         this.dispose();
@@ -489,7 +485,7 @@ public class Main extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jButton3ActionPerformed
 
-<<<<<<< HEAD
+
     private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
         //ekranı ve parayı guncelle 
         Connection baglanti;
@@ -509,7 +505,7 @@ public class Main extends javax.swing.JFrame {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_button1ActionPerformed
-=======
+
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
         String Adim = KisiAD1.getText();
@@ -537,7 +533,7 @@ public class Main extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_jButton1ActionPerformed
->>>>>>> 616357d4cc80e89ef4ae655b6033fab8243cd4db
+
 
     /**
      * @param args the command line arguments
