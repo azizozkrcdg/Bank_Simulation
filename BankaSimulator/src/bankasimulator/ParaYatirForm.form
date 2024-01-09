@@ -28,7 +28,7 @@
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jTextField1" alignment="0" min="-2" pref="182" max="-2" attributes="0"/>
+                          <Component id="paraYatir" alignment="0" min="-2" pref="182" max="-2" attributes="0"/>
                           <Component id="jLabel1" min="-2" pref="222" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -47,7 +47,7 @@
               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="jTextField1" min="-2" max="-2" attributes="0"/>
+              <Component id="paraYatir" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="jButton1" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="174" max="32767" attributes="0"/>
@@ -67,7 +67,7 @@
         <Property name="text" type="java.lang.String" value="Yat&#x131;rmak &#x130;stedi&#x11f;iniz Tutar&#x131; Giriniz: "/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField1">
+    <Component class="javax.swing.JTextField" name="paraYatir">
     </Component>
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>

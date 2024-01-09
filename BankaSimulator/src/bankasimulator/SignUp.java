@@ -8,6 +8,9 @@ import java.sql.PreparedStatement;
 import javax.swing.JOptionPane;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.Random;
+import java.sql.ResultSet;
+import java.sql.Statement;
 /**
  *
  * @author Hasan
@@ -15,6 +18,19 @@ import java.sql.SQLException;
 public class SignUp extends javax.swing.JFrame {
     Connection con = null;
     PreparedStatement pst = null;
+    ResultSet rs = null;
+    private static String generateRandomIban() {
+        
+        StringBuilder ibanBuilder = new StringBuilder("TR");
+        Random random = new Random();
+        int kontrolSayisi = random.nextInt(90) + 10;
+        ibanBuilder.append(String.format("%02d", kontrolSayisi));
+        for (int i = 0; i < 22; i++) {
+            int rakam = random.nextInt(10);
+            ibanBuilder.append(rakam);
+        }
+        return ibanBuilder.toString();
+    }
     /**
      * Creates new form SignUp
      */
@@ -45,6 +61,11 @@ public class SignUp extends javax.swing.JFrame {
         signup_Password = new javax.swing.JTextField();
         button_Kayit2 = new javax.swing.JButton();
         button_Giris2 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        isim_Label = new javax.swing.JLabel();
+        telefon_Label = new javax.swing.JLabel();
+        mail_Label = new javax.swing.JLabel();
+        sifre_Label = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -134,6 +155,14 @@ public class SignUp extends javax.swing.JFrame {
             }
         });
 
+        isim_Label.setText(" ");
+
+        telefon_Label.setText(" ");
+
+        mail_Label.setText(" ");
+
+        sifre_Label.setText(" ");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -151,10 +180,22 @@ public class SignUp extends javax.swing.JFrame {
                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(signup_Password, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE))
-                .addGap(59, 59, 59)
-                .addComponent(button_Kayit2)
-                .addGap(29, 29, 29)
-                .addComponent(button_Giris2)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(59, 59, 59)
+                        .addComponent(button_Kayit2)
+                        .addGap(29, 29, 29)
+                        .addComponent(button_Giris2))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(mail_Label, javax.swing.GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE)
+                            .addComponent(telefon_Label, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(isim_Label, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(sifre_Label, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -164,21 +205,30 @@ public class SignUp extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel6)
                 .addGap(4, 4, 4)
-                .addComponent(signup_Name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(signup_Name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2)
+                    .addComponent(isim_Label))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(signup_Phone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(signup_Phone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(telefon_Label))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(signup_Mail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(signup_Mail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(mail_Label))
                 .addGap(17, 17, 17)
                 .addComponent(jLabel4)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(signup_Password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(signup_Password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(sifre_Label))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
@@ -220,10 +270,15 @@ public class SignUp extends javax.swing.JFrame {
     }//GEN-LAST:event_signup_PasswordActionPerformed
 
     private void button_Kayit2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_Kayit2ActionPerformed
-        try{
-            String query = "INSERT INTO `banka_kayit`(`signup_Name`, `signup_Phone`, `signup_Mail`, `signup_Password`) VALUES (?,?,?,?)";
+        
+        
+       
+       try{
+             
+             String query = "INSERT INTO `banka_kayit`(`signup_Name`, `signup_Phone`, `signup_Mail`, `signup_Password`) VALUES (?,?,?,?)";
              con = DriverManager.getConnection("jdbc:mysql://localhost:3308/java-test","root",""); 
-             pst = con.prepareStatement(query);
+             
+             pst = con.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
              pst.setString(1, signup_Name.getText());
              pst.setString(2, signup_Phone.getText());
              pst.setString(3, signup_Mail.getText());
@@ -232,8 +287,28 @@ public class SignUp extends javax.swing.JFrame {
              
              JOptionPane.showMessageDialog(null, "Kayıt Başarılı");
              
+            
+            rs = pst.getGeneratedKeys();
+            int userId = -1;
+            if (rs.next()) {
+                userId = rs.getInt(1);
+            }
+            if (userId != -1){
+               String randomIban = generateRandomIban();
+             
+
+               String walletQuery = "INSERT INTO `cuzdan`(`kullanici_id`, `iban`, `mevcut_para`) VALUES (?,?,?)";
+               pst = con.prepareStatement(walletQuery);
+                pst.setInt(1, userId);
+                pst.setString(2, randomIban);
+                pst.setDouble(3, 0.0); 
+                pst.executeUpdate();
+                
+            }
+             
         }
         catch(Exception ex){
+            ex.printStackTrace();
             JOptionPane.showMessageDialog(null, ex);
         }
     }//GEN-LAST:event_button_Kayit2ActionPerformed
@@ -276,7 +351,9 @@ public class SignUp extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public static javax.swing.JButton button_Giris2;
     public static javax.swing.JButton button_Kayit2;
+    private javax.swing.JLabel isim_Label;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -284,9 +361,12 @@ public class SignUp extends javax.swing.JFrame {
     public static javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JLabel mail_Label;
+    private javax.swing.JLabel sifre_Label;
     public static javax.swing.JTextField signup_Mail;
     public static javax.swing.JTextField signup_Name;
     protected static javax.swing.JTextField signup_Password;
     protected static javax.swing.JTextField signup_Phone;
+    private javax.swing.JLabel telefon_Label;
     // End of variables declaration//GEN-END:variables
 }

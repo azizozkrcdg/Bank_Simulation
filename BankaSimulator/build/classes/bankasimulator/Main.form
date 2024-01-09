@@ -30,7 +30,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="17" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -50,8 +50,20 @@
               <Component id="jPanel3" alignment="0" max="32767" attributes="0"/>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
+<<<<<<< HEAD
                   <Component id="jPanel4" min="-2" pref="549" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="500" max="-2" attributes="0"/>
+=======
+                  <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jButton4" alignment="0" min="-2" pref="206" max="-2" attributes="0"/>
+                      <Component id="jButton3" alignment="1" min="-2" pref="206" max="-2" attributes="0"/>
+                      <Component id="jButton2" alignment="1" min="-2" pref="206" max="-2" attributes="0"/>
+                      <Component id="jButton1" alignment="1" min="-2" pref="206" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+>>>>>>> 616357d4cc80e89ef4ae655b6033fab8243cd4db
               </Group>
           </Group>
         </DimensionLayout>
@@ -59,9 +71,26 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+<<<<<<< HEAD
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jPanel4" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
+=======
+                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="jButton1" min="-2" pref="43" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                          <Component id="jButton2" min="-2" pref="43" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="jButton3" min="-2" pref="43" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                          <Component id="jButton4" min="-2" pref="40" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="jPanel4" alignment="0" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="19" max="32767" attributes="0"/>
+>>>>>>> 616357d4cc80e89ef4ae655b6033fab8243cd4db
                   <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -78,10 +107,19 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
+<<<<<<< HEAD
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="191" max="-2" attributes="0"/>
                       <Component id="jLabel1" min="-2" pref="231" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
+=======
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="jLabel1" min="-2" pref="158" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="203" max="-2" attributes="0"/>
+                      <Component id="jButton5" min="-2" pref="70" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+>>>>>>> 616357d4cc80e89ef4ae655b6033fab8243cd4db
                   </Group>
               </Group>
             </DimensionLayout>
@@ -134,6 +172,7 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
+<<<<<<< HEAD
                       <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
@@ -175,11 +214,44 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="gonderici_id" min="-2" max="-2" attributes="0"/>
                                   <Component id="button1" min="-2" pref="73" max="-2" attributes="0"/>
+=======
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel2" min="-2" pref="65" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="jLabel5" min="-2" pref="63" max="-2" attributes="0"/>
+                                  <Component id="jLabel3" min="-2" pref="65" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="jLabel6" pref="65" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="324" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="kisiBakiye" min="-2" pref="55" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="kisiIBAN" max="32767" attributes="0"/>
+                                          <Component id="KisiAD1" pref="119" max="32767" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jLabel4" max="32767" attributes="0"/>
+                                  </Group>
+>>>>>>> 616357d4cc80e89ef4ae655b6033fab8243cd4db
                               </Group>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
+<<<<<<< HEAD
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                       <Component id="jButton1" min="-2" pref="123" max="-2" attributes="0"/>
@@ -198,11 +270,14 @@
                           <EmptySpace pref="590" max="32767" attributes="0"/>
                       </Group>
                   </Group>
+=======
+>>>>>>> 616357d4cc80e89ef4ae655b6033fab8243cd4db
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
+<<<<<<< HEAD
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
@@ -252,25 +327,43 @@
                           <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                           <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                           <EmptySpace pref="268" max="32767" attributes="0"/>
+=======
+                      <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                      <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="kisiBakiye" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="KisiAD1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel5" alignment="3" min="-2" pref="17" max="-2" attributes="0"/>
+                          <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="kisiIBAN" alignment="3" min="-2" max="-2" attributes="0"/>
+>>>>>>> 616357d4cc80e89ef4ae655b6033fab8243cd4db
+                      </Group>
+                      <EmptySpace pref="106" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
+<<<<<<< HEAD
             <Component class="javax.swing.JLabel" name="jLabel2">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Tel No : "/>
               </Properties>
             </Component>
+=======
+>>>>>>> 616357d4cc80e89ef4ae655b6033fab8243cd4db
             <Component class="javax.swing.JLabel" name="jLabel3">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Ad&#x131;      : "/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel4">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="E Mail  : "/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel5">
@@ -280,6 +373,7 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel6">
             </Component>
+<<<<<<< HEAD
             <Component class="javax.swing.JLabel" name="KisiPhone">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Ad&#x131;      : "/>
@@ -288,20 +382,37 @@
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
               </AuxValues>
             </Component>
+=======
+>>>>>>> 616357d4cc80e89ef4ae655b6033fab8243cd4db
             <Component class="javax.swing.JLabel" name="KisiAD1">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Ad&#x131;      : "/>
+                <Property name="text" type="java.lang.String" value=" "/>
               </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JLabel" name="KisiMail">
+            <Component class="javax.swing.JLabel" name="jLabel2">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Ad&#x131;      : "/>
+                <Property name="text" type="java.lang.String" value="Bakiye   :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="kisiBakiye">
+              <Properties>
+                <Property name="text" type="java.lang.String" value=" "/>
               </Properties>
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel4">
+            </Component>
+            <Component class="javax.swing.JLabel" name="kisiIBAN">
+              <Properties>
+                <Property name="text" type="java.lang.String" value=" "/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
               </AuxValues>
             </Component>
             <Component class="javax.swing.JLabel" name="KisiIBAN">
